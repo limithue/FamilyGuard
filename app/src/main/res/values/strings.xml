@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">安心圈</string>
+    <string name="nav_home">首页</string>
+    <string name="nav_family">家庭圈</string>
+    <string name="nav_alert">告警</string>
+    <string name="nav_settings">我的</string>
+
+    <string name="home_title">家庭安全概览</string>
+    <string name="home_subtitle">实时守护每一位家人</string>
+    <string name="home_sos">一键求助 SOS</string>
+    <string name="home_sos_desc">遇到问题，立即通知家人</string>
+    <string name="home_status_title">家人状态</string>
+    <string name="home_view_all">查看全部</string>
+    <string name="home_features_title">守护功能</string>
+    <string name="feature_fence">电子围栏</string>
+    <string name="feature_fence_desc">进出安全区域自动提醒</string>
+    <string name="feature_track">轨迹记录</string>
+    <string name="feature_track_desc">后台记录，随时回放</string>
+    <string name="feature_sos">紧急求助</string>
+    <string name="feature_sos_desc">位置与状态一键送达</string>
+    <string name="feature_health">健康提醒</string>
+    <string name="feature_health_desc">用药、复诊不再遗忘</string>
+
+    <string name="family_title">家庭圈</string>
+    <string name="family_member_count">成员数</string>
+    <string name="family_invite">邀请家人</string>
+    <string name="family_add">添加成员</string>
+    <string name="family_add_hint">演示：添加一位家庭成员</string>
+    <string name="family_role_admin">管理员</string>
+    <string name="family_role_member">成员</string>
+    <string name="family_role_cared">被照护人</string>
+    <string name="family_status_online">在线</string>
+    <string name="family_status_offline">离线</string>
+
+    <string name="alert_title">告警中心</string>
+    <string name="alert_empty">暂无告警，一切安好</string>
+    <string name="alert_handled">已处理</string>
+    <string name="alert_pending">待处理</string>
+    <string name="alert_mark_handled">标记已处理</string>
+    <string name="alert_type_fence">围栏提醒</string>
+    <string name="alert_type_night">夜归提醒</string>
+    <string name="alert_type_still">长时间未动</string>
+    <string name="alert_type_offline">设备离线</string>
+    <string name="alert_type_sos">紧急求助</string>
+    <string name="alert_add_demo">添加演示告警</string>
+
+    <string name="settings_title">我的</string>
+    <string name="settings_privacy">隐私与权限</string>
+    <string name="settings_location_permission">定位权限</string>
+    <string name="settings_location_desc">用于家人位置共享与轨迹记录</string>
+    <string name="settings_location_status_granted">已授予</string>
+    <string name="settings_location_status_denied">未授予，点击申请</string>
+    <string name="settings_service">定位服务</string>
+    <string name="settings_service_desc">后台持续记录位置</string>
+    <string name="settings_service_start">开启服务</string>
+    <string name="settings_service_stop">停止服务</string>
+    <string name="settings_service_running">服务运行中</string>
+    <string name="settings_service_stopped">服务已停止</string>
+    <string name="settings_about">关于</string>
+    <string name="settings_about_desc">安心圈 FamilyGuard v0.1.0</string>
+    <string name="permission_granted">权限已授予</string>
+    <string name="permission_denied">权限被拒绝</string>
+    <string name="service_started">定位服务已开启</string>
+    <string name="service_stopped">定位服务已停止</string>
+    <string name="sos_sent">求助信息已发送给家人</string>
+    <string name="member_added">成员已添加</string>
+    <string name="notification_channel_name">家人守护</string>
+    <string name="notification_channel_desc">位置记录与紧急求助通知</string>
+    <string name="location_notification_title">安心圈正在保护家人</string>
+    <string name="location_notification_text">后台定位服务运行中</string>
+</resources>
