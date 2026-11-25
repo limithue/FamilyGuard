@@ -14,7 +14,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="功能"
-        android:textColor="@color/text_primary"
+        android:textColor="@color/glass_text"
         android:textSize="14sp"
         android:textStyle="bold" />
 
@@ -24,6 +24,6 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
         android:text="功能描述"
-        android:textColor="@color/text_secondary"
+        android:textColor="@color/glass_text_secondary"
         android:textSize="11sp" />
 </LinearLayout>

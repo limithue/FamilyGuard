@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginBottom="8dp"
-    app:cardCornerRadius="12dp"
-    app:cardElevation="2dp"
-    app:cardBackgroundColor="@color/bg_card">
+    android:background="@drawable/bg_glass_card"
+    android:elevation="4dp">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -20,7 +18,7 @@
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:gravity="center"
-            android:background="@drawable/bg_avatar"
+            android:background="@drawable/bg_glass_avatar"
             android:text="亲"
             android:textColor="@color/white"
             android:textSize="16sp"
@@ -38,7 +36,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="成员"
-                android:textColor="@color/text_primary"
+                android:textColor="@color/glass_text"
                 android:textSize="14sp"
                 android:textStyle="bold" />
 
@@ -48,7 +46,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="2dp"
                 android:text="角色"
-                android:textColor="@color/text_secondary"
+                android:textColor="@color/glass_text_secondary"
                 android:textSize="11sp" />
         </LinearLayout>
 
@@ -74,4 +72,4 @@
             android:textColor="@color/danger"
             android:textSize="11sp" />
     </LinearLayout>
-</androidx.cardview.widget.CardView>
+</FrameLayout>

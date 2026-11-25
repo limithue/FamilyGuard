@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 液态玻璃页面底：柔和渐变 + 四角彩色光晕 -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="rectangle">
+            <gradient
+                android:type="linear"
+                android:angle="135"
+                android:startColor="#EEF3FF"
+                android:centerColor="#F5F0FF"
+                android:endColor="#E9FAF5" />
+        </shape>
+    </item>
+    <item android:gravity="top|start">
+        <shape android:shape="oval">
+            <size android:width="280dp" android:height="280dp" />
+            <gradient
+                android:type="radial"
+                android:gradientRadius="140dp"
+                android:startColor="#6693C5FD"
+                android:endColor="#0093C5FD" />
+        </shape>
+    </item>
+    <item android:gravity="top|end">
+        <shape android:shape="oval">
+            <size android:width="260dp" android:height="260dp" />
+            <gradient
+                android:type="radial"
+                android:gradientRadius="130dp"
+                android:startColor="#59C4B5FD"
+                android:endColor="#00C4B5FD" />
+        </shape>
+    </item>
+    <item android:gravity="bottom|start">
+        <shape android:shape="oval">
+            <size android:width="300dp" android:height="300dp" />
+            <gradient
+                android:type="radial"
+                android:gradientRadius="150dp"
+                android:startColor="#4D81F7E8"
+                android:endColor="#0081F7E8" />
+        </shape>
+    </item>
+    <item android:gravity="bottom|end">
+        <shape android:shape="oval">
+            <size android:width="280dp" android:height="280dp" />
+            <gradient
+                android:type="radial"
+                android:gradientRadius="140dp"
+                android:startColor="#55F9A7D6"
+                android:endColor="#00F9A7D6" />
+        </shape>
+    </item>
+</layer-list>

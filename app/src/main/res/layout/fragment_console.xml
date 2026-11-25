@@ -11,12 +11,11 @@
         android:padding="16dp">
 
         <!-- 管理员身份卡片 -->
-        <androidx.cardview.widget.CardView
+        <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:cardCornerRadius="16dp"
-            app:cardElevation="4dp"
-            app:cardBackgroundColor="@color/primary_dark">
+        android:background="@drawable/bg_glass_primary"
+        android:elevation="8dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -28,7 +27,7 @@
                 <FrameLayout
                     android:layout_width="52dp"
                     android:layout_height="52dp"
-                    android:background="@drawable/bg_avatar">
+                    android:background="@drawable/bg_glass_avatar">
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -69,7 +68,7 @@
                     android:id="@+id/tv_admin_badge"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/bg_badge"
+                    android:background="@drawable/bg_glass_badge"
                     android:paddingStart="10dp"
                     android:paddingTop="4dp"
                     android:paddingEnd="10dp"
@@ -79,7 +78,7 @@
                     android:textSize="12sp"
                     android:textStyle="bold" />
             </LinearLayout>
-        </androidx.cardview.widget.CardView>
+        </FrameLayout>
 
         <!-- 数据概览 -->
         <TextView
@@ -87,7 +86,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="22dp"
             android:text="@string/console_stat_title"
-            android:textColor="@color/text_primary"
+            android:textColor="@color/glass_text"
             android:textSize="16sp"
             android:textStyle="bold" />
 
@@ -118,7 +117,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="@string/console_section_member"
-                android:textColor="@color/text_primary"
+                android:textColor="@color/glass_text"
                 android:textSize="16sp"
                 android:textStyle="bold" />
 
@@ -150,7 +149,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="@string/console_section_geofence"
-                android:textColor="@color/text_primary"
+                android:textColor="@color/glass_text"
                 android:textSize="16sp"
                 android:textStyle="bold" />
 
@@ -175,17 +174,16 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="22dp"
             android:text="@string/console_section_tools"
-            android:textColor="@color/text_primary"
+            android:textColor="@color/glass_text"
             android:textSize="16sp"
             android:textStyle="bold" />
 
-        <androidx.cardview.widget.CardView
+        <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            app:cardCornerRadius="12dp"
-            app:cardElevation="2dp"
-            app:cardBackgroundColor="@color/bg_card">
+        android:background="@drawable/bg_glass_card"
+        android:elevation="4dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -199,7 +197,7 @@
                     android:layout_height="wrap_content"
                     android:padding="14dp"
                     android:text="@string/console_clear_handled"
-                    android:textColor="@color/text_primary"
+                    android:textColor="@color/glass_text"
                     android:textSize="14sp" />
 
                 <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/divider" />
@@ -213,6 +211,6 @@
                     android:textColor="@color/danger"
                     android:textSize="14sp" />
             </LinearLayout>
-        </androidx.cardview.widget.CardView>
+        </FrameLayout>
     </LinearLayout>
 </androidx.core.widget.NestedScrollView>
