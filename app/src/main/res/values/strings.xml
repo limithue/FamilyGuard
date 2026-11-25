@@ -47,6 +47,11 @@
     <string name="alert_add_demo">添加演示告警</string>
 
     <string name="settings_title">我的</string>
+    <string name="settings_appearance">外观</string>
+    <string name="settings_glass">液态玻璃浓度</string>
+    <string name="settings_glass_desc">从通透到磨砂，调整玻璃的雾面程度</string>
+    <string name="settings_glass_clear">更通透</string>
+    <string name="settings_glass_tinted">更磨砂</string>
     <string name="settings_privacy">隐私与权限</string>
     <string name="settings_location_permission">定位权限</string>
     <string name="settings_location_desc">用于家人位置共享与轨迹记录</string>

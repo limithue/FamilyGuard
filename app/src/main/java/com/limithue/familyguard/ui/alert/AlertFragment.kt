@@ -11,10 +11,11 @@ import com.limithue.familyguard.data.model.Alert
 import com.limithue.familyguard.data.repository.AppRepository
 import com.limithue.familyguard.databinding.FragmentAlertBinding
 import com.limithue.familyguard.ui.AlertAdapter
+import com.limithue.familyguard.ui.NavActionHandler
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch
 
-class AlertFragment : Fragment() {
+class AlertFragment : Fragment(), NavActionHandler {
 
     private var _binding: FragmentAlertBinding? = null
     private val binding get() = _binding!!
@@ -50,7 +51,10 @@ class AlertFragment : Fragment() {
             }
         }
 
-        binding.btnAddAlert.setOnClickListener { addDemoAlert() }
+    }
+
+    override fun onNavAction() {
+        addDemoAlert()
     }
 
     private fun addDemoAlert() {

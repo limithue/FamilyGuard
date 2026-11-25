@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/stat_root"
-    android:layout_width="match_parent"
+    android:layout_width="0dp"
     android:layout_height="wrap_content"
-    android:layout_columnWeight="1"
-    android:layout_margin="4dp"
+    android:layout_weight="1"
     android:background="@drawable/bg_feature_card"
+    android:tag="glass"
     android:gravity="center"
     android:orientation="vertical"
     android:padding="16dp">

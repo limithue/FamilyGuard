@@ -3,17 +3,19 @@
     android:id="@+id/member_card"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginBottom="8dp"
+    android:layout_marginBottom="12dp"
+    android:tag="glass"
     android:background="@drawable/bg_glass_card"
     android:elevation="4dp"
     android:gravity="center_vertical"
     android:orientation="horizontal"
-    android:padding="14dp">
+    android:padding="16dp">
 
     <FrameLayout
         android:id="@+id/avatar_frame"
         android:layout_width="44dp"
         android:layout_height="44dp"
+        android:tag="glass"
         android:background="@drawable/bg_glass_avatar">
 
         <TextView

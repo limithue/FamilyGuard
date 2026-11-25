@@ -5,11 +5,14 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.SeekBar
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.limithue.familyguard.R
 import com.limithue.familyguard.databinding.FragmentSettingsBinding
 import com.limithue.familyguard.service.LocationService
+import com.limithue.familyguard.util.AppearancePrefs
+import com.limithue.familyguard.util.GlassTint
 import com.limithue.familyguard.util.PermissionHelper
 
 class SettingsFragment : Fragment() {
@@ -28,28 +31,38 @@ class SettingsFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         refreshPermissionStatus()
 
-        binding.tvPermissionStatus.setOnClickListener {
+        binding.rowPermission.setOnClickListener {
             PermissionHelper.requestLocationPermissions(requireActivity())
         }
 
-        binding.btnToggleService.setOnClickListener {
-            if (!PermissionHelper.hasLocationPermission(requireActivity())) {
+        binding.switchService.setOnCheckedChangeListener { checked ->
+            if (checked && !PermissionHelper.hasLocationPermission(requireActivity())) {
+                binding.switchService.isChecked = false
                 PermissionHelper.requestLocationPermissions(requireActivity())
-                return@setOnClickListener
+                return@setOnCheckedChangeListener
             }
-            toggleService()
+            if (checked) {
+                LocationService.start(requireContext())
+                Toast.makeText(requireContext(), R.string.service_started, Toast.LENGTH_SHORT).show()
+            } else {
+                LocationService.stop(requireContext())
+                Toast.makeText(requireContext(), R.string.service_stopped, Toast.LENGTH_SHORT).show()
+            }
+            refreshServiceStatus()
         }
-    }
 
-    private fun toggleService() {
-        val running = LocationService.isRunning()
-        if (running) {
-            LocationService.stop(requireContext())
-            Toast.makeText(requireContext(), R.string.service_stopped, Toast.LENGTH_SHORT).show()
-        } else {
-            LocationService.start(requireContext())
-            Toast.makeText(requireContext(), R.string.service_started, Toast.LENGTH_SHORT).show()
-        }
+        binding.seekGlass.progress = AppearancePrefs.get(requireContext())
+        binding.seekGlass.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
+            override fun onProgressChanged(seekBar: SeekBar?, progress: Int, fromUser: Boolean) {
+                if (!fromUser) return
+                AppearancePrefs.set(requireContext(), progress)
+                GlassTint.apply(requireActivity().findViewById(android.R.id.content), progress)
+            }
+
+            override fun onStartTrackingTouch(seekBar: SeekBar?) {}
+            override fun onStopTrackingTouch(seekBar: SeekBar?) {}
+        })
+
         refreshServiceStatus()
     }
 
@@ -69,9 +82,7 @@ class SettingsFragment : Fragment() {
         binding.tvServiceStatus.text = getString(
             if (running) R.string.settings_service_running else R.string.settings_service_stopped
         )
-        binding.btnToggleService.text = getString(
-            if (running) R.string.settings_service_stop else R.string.settings_service_start
-        )
+        binding.switchService.isChecked = running
     }
 
     override fun onResume() {

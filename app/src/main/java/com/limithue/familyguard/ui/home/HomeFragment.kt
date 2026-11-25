@@ -13,10 +13,11 @@ import com.limithue.familyguard.data.model.Alert
 import com.limithue.familyguard.data.repository.AppRepository
 import com.limithue.familyguard.databinding.FragmentHomeBinding
 import com.limithue.familyguard.ui.MemberAdapter
+import com.limithue.familyguard.ui.NavActionHandler
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch
 
-class HomeFragment : Fragment() {
+class HomeFragment : Fragment(), NavActionHandler {
 
     private var _binding: FragmentHomeBinding? = null
     private val binding get() = _binding!!
@@ -78,6 +79,10 @@ class HomeFragment : Fragment() {
                 memberAdapter.submitList(list.take(3))
             }
         }
+    }
+
+    override fun onNavAction() {
+        sendSos()
     }
 
     private fun sendSos() {

@@ -1,12 +1,65 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- 主色玻璃卡片：蓝紫渐变 + 高光 -->
-<shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="rectangle">
-    <gradient
-        android:type="linear"
-        android:angle="135"
-        android:startColor="#CC2563EB"
-        android:centerColor="#B83050DC"
-        android:endColor="#A07C3AED" />
-    <stroke android:width="1.5dp" android:color="#88FFFFFF" />
-    <corners android:radius="24dp" />
-</shape>
+<!-- 主色液态玻璃：蓝紫通透玻璃 + 上缘高光 + 底部内阴影 -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:bottom="0dp"
+        android:left="0dp"
+        android:right="0dp"
+        android:top="2dp">
+        <shape android:shape="rectangle">
+            <solid android:color="#332338C9" />
+            <corners android:radius="26dp" />
+        </shape>
+    </item>
+
+    <item>
+        <shape android:shape="rectangle">
+            <gradient
+                android:angle="135"
+                android:centerColor="#C73050DC"
+                android:endColor="#A66D3FE0"
+                android:startColor="#E6407BFF" />
+            <corners android:radius="24dp" />
+        </shape>
+    </item>
+
+    <!-- 上缘定向高光 -->
+    <item
+        android:gravity="top"
+        android:height="30dp">
+        <shape android:shape="rectangle">
+            <gradient
+                android:angle="270"
+                android:endColor="#00FFFFFF"
+                android:startColor="#80FFFFFF" />
+            <corners
+                android:topLeftRadius="24dp"
+                android:topRightRadius="24dp" />
+        </shape>
+    </item>
+
+    <!-- 底部内阴影 -->
+    <item
+        android:gravity="bottom"
+        android:height="22dp">
+        <shape android:shape="rectangle">
+            <gradient
+                android:angle="270"
+                android:endColor="#3D1E2A8C"
+                android:startColor="#00FFFFFF" />
+            <corners
+                android:bottomLeftRadius="24dp"
+                android:bottomRightRadius="24dp" />
+        </shape>
+    </item>
+
+    <item>
+        <shape android:shape="rectangle">
+            <stroke
+                android:width="1dp"
+                android:color="#4DFFFFFF" />
+            <corners android:radius="24dp" />
+        </shape>
+    </item>
+</layer-list>

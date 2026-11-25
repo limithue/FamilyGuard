@@ -1,19 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- 底部玻璃导航：半透明 + 顶部高光线 -->
+<!-- 导航层液态玻璃：顶部 1dp 高光 + 底部固定高光带（iOS 27）+ 底缘暗线分离 -->
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
     <item>
         <shape android:shape="rectangle">
             <gradient
-                android:type="linear"
-                android:angle="90"
-                android:startColor="#E6FFFFFF"
-                android:endColor="#B3F8FAFF" />
+                android:angle="270"
+                android:centerColor="#E6FFFFFF"
+                android:endColor="#D9F7FAFF"
+                android:startColor="#F5FFFFFF" />
         </shape>
     </item>
-    <item android:gravity="top">
+
+    <!-- 顶部高光 -->
+    <item
+        android:gravity="top"
+        android:height="1dp">
         <shape android:shape="rectangle">
-            <size android:height="1dp" />
-            <solid android:color="#80FFFFFF" />
+            <solid android:color="#E6FFFFFF" />
+        </shape>
+    </item>
+
+    <!-- iOS 27：固定在底缘的柔和高光带 -->
+    <item
+        android:gravity="bottom"
+        android:height="16dp">
+        <shape android:shape="rectangle">
+            <gradient
+                android:angle="270"
+                android:endColor="#66FFFFFF"
+                android:startColor="#00FFFFFF" />
+        </shape>
+    </item>
+
+    <!-- 底缘暗线：与内容分层 -->
+    <item
+        android:gravity="bottom"
+        android:height="1dp">
+        <shape android:shape="rectangle">
+            <solid android:color="#1A26405F" />
         </shape>
     </item>
 </layer-list>
