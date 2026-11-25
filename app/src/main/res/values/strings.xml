@@ -4,6 +4,7 @@
     <string name="nav_home">首页</string>
     <string name="nav_family">家庭圈</string>
     <string name="nav_alert">告警</string>
+    <string name="nav_console">控制台</string>
     <string name="nav_settings">我的</string>
 
     <string name="home_title">家庭安全概览</string>
@@ -69,4 +70,45 @@
     <string name="notification_channel_desc">位置记录与紧急求助通知</string>
     <string name="location_notification_title">安心圈正在保护家人</string>
     <string name="location_notification_text">后台定位服务运行中</string>
+
+    <!-- 控制台 -->
+    <string name="console_title">管理控制台</string>
+    <string name="console_admin_badge">管理员</string>
+    <string name="console_admin_name">李晓晨</string>
+    <string name="console_admin_hint">家庭安全管理员 · 拥有管理权限</string>
+    <string name="console_stat_title">数据概览</string>
+    <string name="console_stat_members">家庭成员</string>
+    <string name="console_stat_admins">管理员</string>
+    <string name="console_stat_alerts">告警记录</string>
+    <string name="console_stat_locations">轨迹点</string>
+    <string name="console_section_member">成员管理</string>
+    <string name="console_section_geofence">电子围栏</string>
+    <string name="console_section_tools">数据维护</string>
+    <string name="console_add_member">添加成员</string>
+    <string name="console_add_geofence">添加围栏</string>
+    <string name="console_clear_handled">清理已处理告警</string>
+    <string name="console_clear_locations">清空轨迹数据</string>
+    <string name="console_switch_role">切换角色</string>
+    <string name="console_remove_member">移除成员</string>
+    <string name="console_remove_geofence">删除围栏</string>
+    <string name="console_toggle_geofence">启用/停用</string>
+    <string name="console_hint_admin_only">仅管理员可执行此操作</string>
+    <string name="console_dialog_add_member">添加家庭成员</string>
+    <string name="console_dialog_add_geofence">添加电子围栏</string>
+    <string name="console_dialog_role">选择角色</string>
+    <string name="console_dialog_cancel">取消</string>
+    <string name="console_dialog_confirm">确定</string>
+    <string name="console_dialog_delete_confirm">确认删除？</string>
+    <string name="console_role_admin">管理员</string>
+    <string name="console_role_member">普通成员</string>
+    <string name="console_role_cared">被照护人</string>
+    <string name="console_last_admin_error">至少需要保留一名管理员</string>
+    <string name="console_member_added">成员已添加</string>
+    <string name="console_geofence_added">围栏已添加</string>
+    <string name="console_role_updated">角色已更新</string>
+    <string name="console_member_removed">成员已移除</string>
+    <string name="console_geofence_removed">围栏已删除</string>
+    <string name="console_data_cleared">数据已清理</string>
+    <string name="console_no_permission">当前账号无管理权限</string>
+    <string name="console_pending_count">待处理 %1$d 条</string>
 </resources>

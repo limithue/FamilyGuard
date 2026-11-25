@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <EditText
+        android:id="@+id/et_geofence_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="围栏名称"
+        android:inputType="text"
+        android:textSize="14sp" />
+
+    <EditText
+        android:id="@+id/et_geofence_radius"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:hint="半径（米）"
+        android:inputType="number"
+        android:text="500"
+        android:textSize="14sp" />
+
+    <EditText
+        android:id="@+id/et_geofence_lat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:hint="纬度"
+        android:inputType="numberDecimal"
+        android:text="25.0389"
+        android:textSize="14sp" />
+
+    <EditText
+        android:id="@+id/et_geofence_lng"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:hint="经度"
+        android:inputType="numberDecimal"
+        android:text="102.7183"
+        android:textSize="14sp" />
+</LinearLayout>

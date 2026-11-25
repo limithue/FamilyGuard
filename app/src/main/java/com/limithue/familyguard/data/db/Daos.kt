@@ -32,6 +32,15 @@ interface FamilyDao {
 
     @Delete
     suspend fun delete(member: FamilyMember)
+
+    @Query("DELETE FROM family_members WHERE id = :id")
+    suspend fun deleteById(id: Long)
+
+    @Query("UPDATE family_members SET role = :role WHERE id = :id")
+    suspend fun updateRole(id: Long, role: String)
+
+    @Query("SELECT COUNT(*) FROM family_members WHERE role = :role")
+    suspend fun countByRole(role: String): Int
 }
 
 @Dao
@@ -47,6 +56,12 @@ interface LocationDao {
 
     @Query("DELETE FROM location_records WHERE timestamp < :before")
     suspend fun deleteOlderThan(before: Long)
+
+    @Query("SELECT COUNT(*) FROM location_records")
+    suspend fun count(): Int
+
+    @Query("DELETE FROM location_records")
+    suspend fun clearAll()
 }
 
 @Dao
@@ -65,18 +80,30 @@ interface AlertDao {
 
     @Query("DELETE FROM alerts")
     suspend fun clearAll()
+
+    @Query("DELETE FROM alerts WHERE isHandled = 1")
+    suspend fun clearHandled()
+
+    @Query("SELECT COUNT(*) FROM alerts")
+    suspend fun count(): Int
 }
 
 @Dao
 interface GeofenceDao {
-    @Query("SELECT * FROM geofences")
+    @Query("SELECT * FROM geofences ORDER BY id ASC")
     fun getAll(): Flow<List<Geofence>>
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insert(geofence: Geofence): Long
 
+    @Update
+    suspend fun update(geofence: Geofence)
+
     @Delete
     suspend fun delete(geofence: Geofence)
+
+    @Query("DELETE FROM geofences WHERE id = :id")
+    suspend fun deleteById(id: Long)
 }
 
 @Dao

@@ -8,6 +8,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.limithue.familyguard.data.repository.AppRepository
 import com.limithue.familyguard.databinding.ActivityMainBinding
 import com.limithue.familyguard.ui.alert.AlertFragment
+import com.limithue.familyguard.ui.console.ConsoleFragment
 import com.limithue.familyguard.ui.family.FamilyFragment
 import com.limithue.familyguard.ui.home.HomeFragment
 import com.limithue.familyguard.ui.settings.SettingsFragment
@@ -42,6 +43,7 @@ class MainActivity : AppCompatActivity() {
                 R.id.nav_home -> switchFragment(HomeFragment())
                 R.id.nav_family -> switchFragment(FamilyFragment())
                 R.id.nav_alert -> switchFragment(AlertFragment())
+                R.id.nav_console -> switchFragment(ConsoleFragment())
                 R.id.nav_settings -> switchFragment(SettingsFragment())
             }
             true

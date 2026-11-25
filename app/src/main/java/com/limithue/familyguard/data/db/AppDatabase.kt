@@ -26,6 +26,8 @@ abstract class AppDatabase : RoomDatabase() {
     abstract fun familyDao(): FamilyDao
     abstract fun locationDao(): LocationDao
     abstract fun alertDao(): AlertDao
+    abstract fun geofenceDao(): GeofenceDao
+    abstract fun reminderDao(): ReminderDao
 
     companion object {
         @Volatile
